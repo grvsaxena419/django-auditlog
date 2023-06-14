@@ -357,7 +357,7 @@ class LogEntry(models.Model):
     )
     changes = models.JSONField(null=True, verbose_name=_("change message"))
     actor = models.CharField(
-        max_length=255, verbose_name=_("actor")
+        max_length=255, verbose_name=_("actor"), null=True, blank=True
     )
     cid = models.CharField(
         max_length=255,

@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
             model_name="logentry",
             name="actor",
             field=models.CharField(
-            max_length=255, verbose_name=_("actor")),
+            max_length=255, verbose_name="actor", null=True, blank=True),
         ),
     ]

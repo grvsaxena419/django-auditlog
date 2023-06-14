@@ -9,7 +9,7 @@ from auditlog.models import LogEntry
 
 @admin.register(LogEntry)
 class LogEntryAdmin(admin.ModelAdmin, LogEntryAdminMixin):
-    list_select_related = ["content_type", "actor"]
+    list_select_related = ["content_type"]
     list_display = [
         "created",
         "resource_url",
