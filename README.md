@@ -1,4 +1,4 @@
-1django-auditlog
+django-auditlog
 ===============
 
 [![Jazzband](https://jazzband.co/static/img/badge.svg)](https://jazzband.co/)

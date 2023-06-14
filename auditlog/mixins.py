@@ -30,13 +30,7 @@ class LogEntryAdminMixin:
     @admin.display(description=_("User"))
     def user_url(self, obj):
         if obj.actor:
-            app_label, model = settings.AUTH_USER_MODEL.split(".")
-            viewname = f"admin:{app_label}_{model.lower()}_change"
-            try:
-                link = urlresolvers.reverse(viewname, args=[obj.actor.pk])
-            except NoReverseMatch:
-                return "%s" % (obj.actor)
-            return format_html('<a href="{}">{}</a>', link, obj.actor)
+            return obj.actor
 
         return "system"
 
